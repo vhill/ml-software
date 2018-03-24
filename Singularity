@@ -1,0 +1,21 @@
+Bootstrap: shub
+From: ucr-singularity/cuda-9.0-base
+
+%post
+
+    # TensorFlow
+    pip install --no-cache-dir tensorflow-gpu==1.5.0
+    
+    # Deep Mind Sonnet
+    pip install --no-cache-dir dm-sonnet-gpu==1.17
+
+    # Theano
+    pip install --no-cache-dir Theano==1.0.1
+
+    # Keras
+    pip install --no-cache-dir keras==2.1.5
+
+    # Pytorch, per pytorch.org information
+    pip install --no-cache-dir https://download.pytorch.org/whl/cu90/torch-0.3.1-cp27-cp27mu-linux_x86_64.whl
+    pip install --no-cache-dir torchvision==0.2.0
+
